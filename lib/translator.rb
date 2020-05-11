@@ -2,6 +2,7 @@ require 'yaml'
 require 'pry'
 
 def load_library(file_path)
+  library = {}
   library = {
     :meaning => {:english => {}, 
                  :japanese => {}                          
