@@ -4,7 +4,8 @@ require 'pry'
 def load_library(file_path)
   library = {
     :meaning => {:english => {}, 
-                           :japanese => {}                          }
+                :japanese => {}                          
+      }
             }
                 binary.pry
    YAML.load_file(file_path).each do |meaning, array|
