@@ -9,6 +9,7 @@ def load_library(file_path)
     library["get_meaning"][japanese] = meaning
   end
   library
+  binary.pry
 end
 
 
