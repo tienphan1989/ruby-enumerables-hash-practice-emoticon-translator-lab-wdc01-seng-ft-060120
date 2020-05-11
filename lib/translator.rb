@@ -8,6 +8,7 @@ def load_library(path)
                     'japanese' => {}
                     }
   }
+  
   emoticon_library.each do |key, value|
   sorted_emoticons['get_meaning'] = key
 ['get_meaning'][:english] = value[0]
