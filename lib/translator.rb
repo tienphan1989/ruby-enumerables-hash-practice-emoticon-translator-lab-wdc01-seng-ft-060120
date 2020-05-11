@@ -9,9 +9,9 @@ def load_library(file_path)
   }
    YAML.load_file(file_path).each do |meaning, array|
     english, japanese = array
-    library["meaning"] = meaning
-    library["meaning"]["english"] = array[0]
-    library["meaning"]["japanese"] = array[1]
+    library[:meaning] = meaning
+    library[:meaning][:english] = array[0]
+    library[:meaning][:japanese] = array[1]
   end
   library
 end
