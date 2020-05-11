@@ -2,11 +2,15 @@ require 'yaml'
 require 'pry'
 
 def load_library(file_path)
-  library = {"get_meaning" => {}, "get_emoticon" => {} }
-  YAML.load_file(file_path).each do |meaning, array|
+  library = {"meaning" => {:english, 
+                           :japanese
+                          }
+            }
+   YAML.load_file(file_path).each do |meaning, array|
     english, japanese = array
-    library["get_emoticon"][english] = japanese
-    library["get_meaning"][japanese] = meaning
+    library["meaning"][:english] = array[0]
+    library["meaning"][:japanese] = array[1]
+    binary.pry
   end
   library
 end
