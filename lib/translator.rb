@@ -2,17 +2,14 @@ require 'yaml'
 require 'pry'
 
 def load_library(file_path)
-  emoticon_library = YAML.load_file(file_path) # emoticon_library = result in the tests
-  sorted_emoticons = {
-    'get_meaning': {},
-    'get_emoticon': {}
-  }
-  emoticon_library.each do |key, value|
-    sorted_emoticons[:get_meaning] = key #Japanese emoticon is the key; name/meaning is the value
-    sorted_emoticons[:get_emoticon][value[0]] = value[1] #English emoticon is the key; Japanese emoticon is the value
+def load_library(file_path)
+  library = {"get_meaning" => {}, "get_emoticon" => {} }
+  YAML.load_file(file_path).each do |meaning, array|
+    english, japanese = array
+    library["get_emoticon"][english] = japanese
+    library["get_meaning"][japanese] = meaning
   end
-  sorted_emoticons
-  binding.pry
+  library
 end
 
 
