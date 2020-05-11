@@ -2,11 +2,13 @@ require 'yaml'
 require 'pry'
 
 def load_library(path)
-  hashed = {"get_meaning" => {}, "get_emoticon" => {} }
+  hashed = {"get_meaning" => {}}
   YAML.load_file(path).each do |meaning, emoticons|
     english, japanese = emoticons
+    hashed["get_meaning"] = meaning
+    hashed["get_meaning"] = {:english => 
     hashed["get_emoticon"][english] = japanese
-    hashed["get_meaning"][japanese] = meaning
+    #hashed["get_meaning"][japanese] = meaning
   end
   hashed
 end
