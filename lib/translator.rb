@@ -8,7 +8,6 @@ def load_library(path)
     'get_emoticon': {}
   }
   binding.pry
-  end
 end
 
 
