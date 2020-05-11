@@ -11,6 +11,7 @@ def load_library(file_path)
     english, japanese = array
     library["meaning"][:english] = array[0]
     library["meaning"][:japanese] = array[1]
+    binary.pry
   end
   library
 end
