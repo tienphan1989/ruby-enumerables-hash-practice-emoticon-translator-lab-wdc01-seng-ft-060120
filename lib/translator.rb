@@ -12,7 +12,6 @@ def load_library(file_path)
     library["meaning"] = meaning
     library["meaning"]["english"] = array[0]
     library["meaning"]["japanese"] = array[1]
-    
   end
   library
 end
