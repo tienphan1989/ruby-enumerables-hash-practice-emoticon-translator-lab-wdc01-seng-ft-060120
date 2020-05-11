@@ -4,8 +4,7 @@ require 'pry'
 def load_library(path)
     emoticon_library = YAML.load_file(path) # emoticon_library = result in the tests
   sorted_emoticons = {
-    'get_meaning': {},
-    'get_emoticon': {}
+    'get_meaning': {}
   }
   sorted_emoticons['get_meaning'] = {:english => "", :Japanese => ""}
   emoticon_library.each do |key, value|
