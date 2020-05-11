@@ -3,7 +3,7 @@ require 'pry'
 
 def load_library(file_path)
   library = {
-    "meaning" => {"english": {}, 
+    "meaning": {"english": {}, 
                 "japanese": {}                          
             }
   }
