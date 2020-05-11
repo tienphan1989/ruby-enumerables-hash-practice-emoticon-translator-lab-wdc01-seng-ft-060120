@@ -8,7 +8,7 @@ def load_library(path)
     hashed["get_meaning"] = meaning
     hashed["get_meaning"][:english] = value[0] 
     hashed["get_meaning"][:japanese] = value[1]
-    bind.pry
+    binding.pry
   end
   hashed
 end
