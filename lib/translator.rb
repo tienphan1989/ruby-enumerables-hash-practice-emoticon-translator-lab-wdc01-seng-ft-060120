@@ -2,7 +2,7 @@ require 'yaml'
 require 'pry'
 
 def load_library(path)
-  emoticon_library = YAML.load_file(file_path)
+  emoticon_library = YAML.load_file(path)
   sorted_emoticons = {
     'get_meaning': {},
     'get_emoticon': {}
