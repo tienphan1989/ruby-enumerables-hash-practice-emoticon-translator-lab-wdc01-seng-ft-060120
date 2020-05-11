@@ -7,9 +7,9 @@ def load_library(file_path)
     english, japanese = array
     library["get_emoticon"][english] = japanese
     library["get_meaning"][japanese] = meaning
+      binary.pry
   end
   library
-  binary.pry
 end
 
 
