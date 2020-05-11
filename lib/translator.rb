@@ -3,7 +3,7 @@ require 'pry'
 
 def load_library(path)
   emoticon_library = YAML.load_file(file_path)
-  binding.pry# emoticon_library = result in the tests
+  binding.pry
   sorted_emoticons = {
     'get_meaning': {},
     'get_emoticon': {}
