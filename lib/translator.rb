@@ -2,7 +2,6 @@ require 'yaml'
 require 'pry'
 
 def load_library(file_path)
-def load_library(file_path)
   library = {"get_meaning" => {}, "get_emoticon" => {} }
   YAML.load_file(file_path).each do |meaning, array|
     english, japanese = array
@@ -14,8 +13,13 @@ end
 
 
 def get_japanese_emoticon(path, emoticon)
-  jpn_emoticon = load_library(file_path)["get_emoticon"][eng_emoticon]
-  jpn_emoticon ? jpn_emoticon : "Sorry, that emoticon was not found"
+ library = load_library(path)
+  result = library["get_emoticon"][emoticon]
+  if result
+    result
+  else
+    "Sorry, that emoticon was not found"
+  end
 end
 
 def get_english_meaning(path, emoticon)
