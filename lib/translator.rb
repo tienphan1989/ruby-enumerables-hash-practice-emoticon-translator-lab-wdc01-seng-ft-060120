@@ -7,9 +7,9 @@ def load_library(path)
     'get_meaning': {}
 
   }
-  sorted_emoticons['get_meaning'] = {:english => "", :Japanese => ""}
+  sorted_emoticons[:get_meaning] = {:english => "", :Japanese => ""}
   emoticon_library.each do |key, value|
-    sorted_emoticons[:get_meaning] = key #Japanese emoticon is the key; name/meaning is the value
+  sorted_emoticons[:get_meaning] = key #Japanese emoticon is the key; name/meaning is the value
 binding.pry
   end
   sorted_emoticons
