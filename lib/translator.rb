@@ -2,19 +2,15 @@ require 'yaml'
 require 'pry'
 
 def load_library(file_path)
-  library = {}
-  library = {
-    "meaning" => {:english => {}, 
-                 :japanese => {}                          
-            }
-  }
-   YAML.load_file(file_path).each do |key, value|
-    english, japanese = value
-    library["meaning"] = key
-    library["meaning"][:english] = value[0]
-    library["meaning"][:japanese] = value[1]
+   output = Hash.new
+   library = YAML.load_file(yaml_file)
+   library.each do |key, value|
+      
+    output[key] = {}
+    output[key][:english] = value[0]
+    output[key][:japanese] = value[1]
   end
-  library
+output
 end
 
 
