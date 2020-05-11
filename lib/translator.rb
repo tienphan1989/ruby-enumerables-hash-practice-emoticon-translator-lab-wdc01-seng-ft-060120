@@ -3,6 +3,7 @@ require 'pry'
 
 def load_library(path)
   hashed = {"get_meaning" => {}}
+  binding.pry
   YAML.load_file(path).each do |meaning, emoticons|
     english, japanese = emoticons
     hashed["get_meaning"] = meaning
