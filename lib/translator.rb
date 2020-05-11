@@ -5,9 +5,8 @@ def load_library(file_path)
   library = {
     :meaning => {:english => {}, 
                 :japanese => {}                          
-      }
             }
-                binary.pry
+  }
    YAML.load_file(file_path).each do |meaning, array|
     english, japanese = array
     library["meaning"][:english] = array[0]
