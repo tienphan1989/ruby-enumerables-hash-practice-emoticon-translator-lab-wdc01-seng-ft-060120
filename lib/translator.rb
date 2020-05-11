@@ -6,9 +6,8 @@ def load_library(path)
   YAML.load_file(path).each do |meaning, emoticons|
     english, japanese = emoticons
     hashed["get_meaning"] = meaning
-    hashed["get_meaning"][:english] = {:english => 
-    hashed["get_emoticon"][english] = japanese
-    #hashed["get_meaning"][japanese] = meaning
+    hashed["get_meaning"][:english] = value[0] 
+    hashed["get_meaning"][:japanese] = value[1]
   end
   hashed
 end
